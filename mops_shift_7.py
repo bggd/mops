@@ -1,7 +1,7 @@
 import bpy
 
 
-class MOPS_OT_shift7(bpy.types.Operator):
+class MOPS_OT_shift_7(bpy.types.Operator):
     """View Align
     Scroll - Roll Left/Right"""
 
@@ -30,7 +30,11 @@ class MOPS_OT_shift7(bpy.types.Operator):
                     elif item.propvalue == "CONFIRM":
                         keymap_confirm.append(item.type)
 
-        if event.type in keymap_confirm:
+        if (
+            event.type in keymap_confirm
+            and not event.is_repeat
+            and event.value == "PRESS"
+        ):
             return {"FINISHED"}
         elif event.type in keymap_cancel:
             return {"CANCELLED"}

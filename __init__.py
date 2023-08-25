@@ -25,11 +25,12 @@ bl_info = {
 import bpy
 
 from . import _refresh_
-from .mops_shift7 import *
 
 _refresh_.reload_modules()
 
-classes = (MOPS_OT_shift7,)
+from .mops_shift_7 import *
+
+classes = (MOPS_OT_shift_7,)
 
 
 def register():
