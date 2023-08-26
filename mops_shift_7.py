@@ -2,12 +2,11 @@ import bpy
 
 
 class MOPS_OT_shift_7(bpy.types.Operator):
-    """View Align
+    """Align View to Active
     Scroll - Roll Left/Right"""
 
     bl_idname = "mops.shift_7"
     bl_label = "Modal Shift Numpad 7"
-    bl_options = {"REGISTER", "UNDO"}
 
     @classmethod
     def poll(cls, context):

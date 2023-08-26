@@ -29,8 +29,9 @@ from . import _refresh_
 _refresh_.reload_modules()
 
 from .mops_shift_7 import *
+from .mops_2_4_6_8 import *
 
-classes = (MOPS_OT_shift_7,)
+classes = (MOPS_OT_shift_7, MOPS_OT_2_4_6_8)
 
 
 def register():
